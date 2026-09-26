@@ -13,10 +13,16 @@ export default function LoginScreen({ navigation }: any) {
         <Text style={styles.buttonText}>Ingresar como Recepción</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity 
-        style={[styles.button, styles.distButton]} 
+      <TouchableOpacity
+        style={[styles.button, styles.distButton]}
         onPress={() => navigation.navigate('Distribucion')}>
         <Text style={styles.buttonText}>Ingresar como Distribución</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={[styles.button, styles.volButton]}
+        onPress={() => navigation.navigate('Voluntario')}>
+        <Text style={styles.buttonText}>Ingresar como Voluntario de Campo</Text>
       </TouchableOpacity>
     </View>
   );
@@ -28,5 +34,6 @@ const styles = StyleSheet.create({
   subtitle: { fontSize: 16, marginBottom: 30, color: '#333' },
   button: { backgroundColor: '#0033A0', padding: 15, borderRadius: 8, width: '100%', alignItems: 'center', marginBottom: 15 },
   distButton: { backgroundColor: '#0085CA' },
+  volButton: { backgroundColor: '#28A745' },
   buttonText: { color: 'white', fontSize: 16, fontWeight: 'bold' }
 });
